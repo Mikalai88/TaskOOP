@@ -1,26 +1,15 @@
-package by.mikhalachkin.electroshop.model;
+package by.mikhalachkin.electroshop.model.cleaning;
 
-public class RobotVacuum extends CleaningEquipment {
-  private int batteryCapacity; // Емкость аккумулятора в мАч
-  private boolean supportsSmartControl; // Поддержка управления через приложение
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
-  public RobotVacuum(String name, String brand, double price, String powerSource, int batteryCapacity, boolean supportsSmartControl) {
-    super(name, brand, price, powerSource);
-    this.batteryCapacity = batteryCapacity;
-    this.supportsSmartControl = supportsSmartControl;
-  }
-
-  public int getBatteryCapacity() {
-    return batteryCapacity;
-  }
-
-  public boolean isSupportsSmartControl() {
-    return supportsSmartControl;
-  }
-
-  @Override
-  public String toString() {
-    return super.toString() + String.format(", Battery Capacity: %d mAh, Smart Control: %b", batteryCapacity, supportsSmartControl);
-  }
+@Getter
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+@SuperBuilder
+public class RobotVacuum extends CleaningAppliance {
+  private final int batteryCapacity;       // Емкость аккумулятора в мАч
+  private final boolean supportsSmartControl; // Поддержка управления через приложение
 }
-

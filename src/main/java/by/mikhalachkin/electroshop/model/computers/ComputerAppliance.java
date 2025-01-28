@@ -1,8 +1,13 @@
-package by.mikhalachkin.electroshop.model;
+package by.mikhalachkin.electroshop.model.computers;
 
-public abstract class ComputerEquipment extends Appliance {
-  public ComputerEquipment(String name, String brand, double price, String powerSource) {
-    super(name, brand, price, powerSource);
-  }
+import by.mikhalachkin.electroshop.model.Appliance;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
+
+@ToString
+@EqualsAndHashCode(callSuper = true)
+@SuperBuilder
+public abstract class ComputerAppliance extends Appliance {
 }
 
