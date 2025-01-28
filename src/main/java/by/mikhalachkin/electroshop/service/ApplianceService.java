@@ -1,8 +1,6 @@
 package by.mikhalachkin.electroshop.service;
 
 import by.mikhalachkin.electroshop.model.Appliance;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.Comparator;
